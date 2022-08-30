@@ -1,0 +1,69 @@
+using System;
+using System.Collections.Generic;
+
+namespace Group4Ice4
+{
+    class Program
+    {
+
+        List<Tuple<string, float>> sort = new List<Tuple<string, float>>();
+        static void Main(string[] args)
+        {
+            float[] DepartmentID = new float[] { 8, 10, 8, 5, 12, 4, 5};
+
+            string[] name = new string[] { "Sisonke", "Synergy", "Impala", "Zen", "Meck", "Momentum", "Signal" };
+
+
+            Program p = new Program();
+            p.sort.Add(new Tuple<string, float>(name[0], DepartmentID[0]));
+            p.sort.Add(new Tuple<string, float>(name[1], DepartmentID[1]));
+            p.sort.Add(new Tuple<string, float>(name[2], DepartmentID[2]));
+            p.sort.Add(new Tuple<string, float>(name[3], DepartmentID[3]));
+            p.sort.Add(new Tuple<string, float>(name[4], DepartmentID[4]));
+            p.sort.Add(new Tuple<string, float>(name[5], DepartmentID[5]));
+            p.sort.Add(new Tuple<string, float>(name[6], DepartmentID[6]));
+
+
+
+
+            for (int i = 0; i < p.sort.Count; i++)
+            {
+
+                if (p.sort[i]
+                    == p.sort[i])
+                {
+                    p.sort.Sort((a, b) => a.Item1.CompareTo(b.Item1));
+                }
+
+            }
+
+            for (int i = 0; i < p.sort.Count; i++)
+            {
+
+
+                p.sort.Sort((a, b) => a.Item2.CompareTo(b.Item2));
+
+
+                //p.SortMethod();
+
+                Console.WriteLine(p.sort[i].Item2 + " " + p.sort[i].Item1);
+
+            }
+
+
+
+        }
+
+        void SortMethod()
+        {
+
+            Program p = new Program();
+
+
+            p.sort.Sort((a, b) => a.Item2.CompareTo(b.Item2));
+
+        }
+
+
+    }
+}
